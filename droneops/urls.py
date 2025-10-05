@@ -8,7 +8,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dashboard.urls')),
-    path('api/users/', include('users.urls')),
+    path('api/', include('users.urls')),
     path('login/', login_view, name='dashboard-login'),
     path('logout/', LogoutView.as_view(next_page='dashboard-login'), name='logout'),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
