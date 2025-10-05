@@ -1,3 +1,4 @@
+# dashboard/views.py
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required, user_passes_test
@@ -5,7 +6,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from users.models import User
 
 # ------------------------------
-# LOGIN
+# LOGIN CMS
 # ------------------------------
 def login_view(request):
     if request.method == 'POST':
@@ -14,6 +15,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user:
             login(request, user)
+            # Guardamos JWT en sesión para futuras peticiones desde frontend (opcional)
             refresh = RefreshToken.for_user(user)
             request.session['access_token'] = str(refresh.access_token)
             return redirect('dashboard-home')
@@ -23,7 +25,7 @@ def login_view(request):
 
 
 # ------------------------------
-# CHECK ADMIN
+# ADMIN CHECK
 # ------------------------------
 def is_admin(user):
     return user.is_superuser or getattr(user, 'role', '') == 'admin'
@@ -65,5 +67,5 @@ def user_create_view(request):
         if username and password and role:
             User.objects.create_user(username=username, email=email, password=password, role=role)
             message = f'Usuario {username} creado correctamente.'
-    
+
     return render(request, 'dashboard/user_create.html', {'message': message})

@@ -11,20 +11,25 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "clave-secreta-local")
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-# En producción pon tu dominio de Render
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
 # -----------------------------
 # SECURITY SETTINGS
 # -----------------------------
-# Cookies seguras y HTTPS
 CSRF_COOKIE_SECURE = not DEBUG
 SESSION_COOKIE_SECURE = not DEBUG
 SESSION_COOKIE_HTTPONLY = True
 SECURE_SSL_REDIRECT = not DEBUG
-SECURE_HSTS_SECONDS = 3600  # fuerza HSTS
+SECURE_HSTS_SECONDS = 3600
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
+
+# -----------------------------
+# LOGIN CONFIG
+# -----------------------------
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
 
 # -----------------------------
 # INSTALLED APPS
@@ -106,7 +111,7 @@ ROOT_URLCONF = 'droneops.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # carpeta global opcional
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,10 +129,9 @@ WSGI_APPLICATION = 'droneops.wsgi.application'
 # -----------------------------
 # DATABASE
 # -----------------------------
-DATABASE_URL = os.environ.get("DATABASE_URL")  # Detecta la variable de entorno en Render
+DATABASE_URL = os.environ.get("DATABASE_URL")
 
 if DATABASE_URL:
-    # Producción / Render -> PostgreSQL
     DATABASES = {
         "default": dj_database_url.config(
             default=DATABASE_URL,
@@ -136,7 +140,6 @@ if DATABASE_URL:
         )
     }
 else:
-    # Local -> SQLite
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
