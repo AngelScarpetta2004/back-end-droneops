@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "clave-secreta-local")
 DEBUG = os.environ.get("DEBUG", "True") == "True"
-ALLOWED_HOSTS = ["https://back-end-droneops.onrender.com"]  # Render usa dominios dinámicos, se puede ajustar luego
+ALLOWED_HOSTS = ["*"]
 
 # -----------------------------
 # INSTALLED APPS
