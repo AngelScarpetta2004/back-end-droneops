@@ -1,0 +1,966 @@
+[
+  
+  {
+    "model": "drones.telemetria",
+    "pk": 1,
+    "fields": {
+      "numero_serie": "DRN-001",
+      "nombre": "Explorer-1",
+      "dias_espacio": 100,
+      "carga": "75%",
+      "estado_comunicacion": "Señal 90%",
+      "version_software": "v1.0.0",
+      "timestamp": "2025-10-04T21:00:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 2,
+    "fields": {
+      "numero_serie": "DRN-002",
+      "nombre": "Explorer-2",
+      "dias_espacio": 120,
+      "carga": "65%",
+      "estado_comunicacion": "Señal 85%",
+      "version_software": "v1.0.1",
+      "timestamp": "2025-10-04T21:05:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 3,
+    "fields": {
+      "numero_serie": "DRN-003",
+      "nombre": "Explorer-3",
+      "dias_espacio": 90,
+      "carga": "80%",
+      "estado_comunicacion": "Señal 95%",
+      "version_software": "v1.0.2",
+      "timestamp": "2025-10-04T21:10:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 4,
+    "fields": {
+      "numero_serie": "DRN-004",
+      "nombre": "Explorer-4",
+      "dias_espacio": 110,
+      "carga": "70%",
+      "estado_comunicacion": "Señal 88%",
+      "version_software": "v1.1.0",
+      "timestamp": "2025-10-04T21:15:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 5,
+    "fields": {
+      "numero_serie": "DRN-005",
+      "nombre": "Explorer-5",
+      "dias_espacio": 130,
+      "carga": "60%",
+      "estado_comunicacion": "Señal 80%",
+      "version_software": "v1.1.1",
+      "timestamp": "2025-10-04T21:20:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 6,
+    "fields": {
+      "numero_serie": "DRN-006",
+      "nombre": "Explorer-6",
+      "dias_espacio": 150,
+      "carga": "50%",
+      "estado_comunicacion": "Señal 75%",
+      "version_software": "v1.2.0",
+      "timestamp": "2025-10-04T21:25:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 7,
+    "fields": {
+      "numero_serie": "DRN-007",
+      "nombre": "Explorer-7",
+      "dias_espacio": 95,
+      "carga": "85%",
+      "estado_comunicacion": "Señal 92%",
+      "version_software": "v1.2.1",
+      "timestamp": "2025-10-04T21:30:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 8,
+    "fields": {
+      "numero_serie": "DRN-008",
+      "nombre": "Explorer-8",
+      "dias_espacio": 105,
+      "carga": "78%",
+      "estado_comunicacion": "Señal 87%",
+      "version_software": "v1.2.2",
+      "timestamp": "2025-10-04T21:35:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 9,
+    "fields": {
+      "numero_serie": "DRN-009",
+      "nombre": "Explorer-9",
+      "dias_espacio": 125,
+      "carga": "62%",
+      "estado_comunicacion": "Señal 81%",
+      "version_software": "v1.3.0",
+      "timestamp": "2025-10-04T21:40:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 10,
+    "fields": {
+      "numero_serie": "DRN-010",
+      "nombre": "Explorer-10",
+      "dias_espacio": 140,
+      "carga": "55%",
+      "estado_comunicacion": "Señal 78%",
+      "version_software": "v1.3.1",
+      "timestamp": "2025-10-04T21:45:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 11,
+    "fields": {
+      "numero_serie": "DRN-011",
+      "nombre": "Explorer-11",
+      "dias_espacio": 115,
+      "carga": "68%",
+      "estado_comunicacion": "Señal 83%",
+      "version_software": "v1.3.2",
+      "timestamp": "2025-10-04T21:50:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 12,
+    "fields": {
+      "numero_serie": "DRN-012",
+      "nombre": "Explorer-12",
+      "dias_espacio": 135,
+      "carga": "58%",
+      "estado_comunicacion": "Señal 79%",
+      "version_software": "v1.4.0",
+      "timestamp": "2025-10-04T21:55:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 13,
+    "fields": {
+      "numero_serie": "DRN-013",
+      "nombre": "Explorer-13",
+      "dias_espacio": 145,
+      "carga": "52%",
+      "estado_comunicacion": "Señal 76%",
+      "version_software": "v1.4.1",
+      "timestamp": "2025-10-04T22:00:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 14,
+    "fields": {
+      "numero_serie": "DRN-014",
+      "nombre": "Explorer-14",
+      "dias_espacio": 155,
+      "carga": "48%",
+      "estado_comunicacion": "Señal 74%",
+      "version_software": "v1.4.2",
+      "timestamp": "2025-10-04T22:05:00Z"
+    }
+  },
+  {
+    "model": "drones.telemetria",
+    "pk": 15,
+    "fields": {
+      "numero_serie": "DRN-015",
+      "nombre": "Explorer-15",
+      "dias_espacio": 165,
+      "carga": "45%",
+      "estado_comunicacion": "Señal 70%",
+      "version_software": "v1.5.0",
+      "timestamp": "2025-10-04T22:10:00Z"
+    }
+  },
+
+  {
+    "model": "events.event",
+    "pk": 1,
+    "fields": {
+      "name": "Alarma de temperatura",
+      "description": "Temperatura superior al límite seguro",
+      "event_type": "alarm",
+      "drone_id": "DRN-001",
+      "created_by": null,
+      "created_at": "2025-10-04T21:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 2,
+    "fields": {
+      "name": "Información de vuelo",
+      "description": "El dron completó la inspección del panel solar",
+      "event_type": "info",
+      "drone_id": "DRN-002",
+      "created_by": null,
+      "created_at": "2025-10-04T21:05:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 3,
+    "fields": {
+      "name": "Alarma de presión",
+      "description": "Presión del sistema hidráulico fuera de rango",
+      "event_type": "alarm",
+      "drone_id": "DRN-003",
+      "created_by": null,
+      "created_at": "2025-10-04T21:10:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 4,
+    "fields": {
+      "name": "Advertencia de batería",
+      "description": "Nivel de batería crítico",
+      "event_type": "warning",
+      "drone_id": "DRN-004",
+      "created_by": null,
+      "created_at": "2025-10-04T21:15:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 5,
+    "fields": {
+      "name": "Alarma de comunicación",
+      "description": "Señal perdida con dron",
+      "event_type": "alarm",
+      "drone_id": "DRN-005",
+      "created_by": null,
+      "created_at": "2025-10-04T21:20:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 6,
+    "fields": {
+      "name": "Información de ruta",
+      "description": "Dron llegó a la coordenada destino",
+      "event_type": "info",
+      "drone_id": "DRN-006",
+      "created_by": null,
+      "created_at": "2025-10-04T21:25:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 7,
+    "fields": {
+      "name": "Advertencia de motor",
+      "description": "Motor derecho con vibración anormal",
+      "event_type": "warning",
+      "drone_id": "DRN-007",
+      "created_by": null,
+      "created_at": "2025-10-04T21:30:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 8,
+    "fields": {
+      "name": "Alarma de sobrecarga",
+      "description": "Carga máxima excedida",
+      "event_type": "alarm",
+      "drone_id": "DRN-008",
+      "created_by": null,
+      "created_at": "2025-10-04T21:35:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 9,
+    "fields": {
+      "name": "Información de sensor",
+      "description": "Sensor de temperatura calibrado correctamente",
+      "event_type": "info",
+      "drone_id": "DRN-009",
+      "created_by": null,
+      "created_at": "2025-10-04T21:40:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 10,
+    "fields": {
+      "name": "Advertencia de viento",
+      "description": "Rachas de viento detectadas, vuelo limitado",
+      "event_type": "warning",
+      "drone_id": "DRN-010",
+      "created_by": null,
+      "created_at": "2025-10-04T21:45:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 11,
+    "fields": {
+      "name": "Alarma de temperatura",
+      "description": "Temperatura crítica en panel solar #3",
+      "event_type": "alarm",
+      "drone_id": "DRN-011",
+      "created_by": null,
+      "created_at": "2025-10-04T21:50:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 12,
+    "fields": {
+      "name": "Información de batería",
+      "description": "Batería recargada al 100%",
+      "event_type": "info",
+      "drone_id": "DRN-012",
+      "created_by": null,
+      "created_at": "2025-10-04T21:55:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 13,
+    "fields": {
+      "name": "Advertencia de GPS",
+      "description": "Coordenadas inconsistentes detectadas",
+      "event_type": "warning",
+      "drone_id": "DRN-013",
+      "created_by": null,
+      "created_at": "2025-10-04T22:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 14,
+    "fields": {
+      "name": "Alarma de sistema",
+      "description": "Fallo crítico en unidad de control",
+      "event_type": "alarm",
+      "drone_id": "DRN-014",
+      "created_by": null,
+      "created_at": "2025-10-04T22:05:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 15,
+    "fields": {
+      "name": "Información de mantenimiento",
+      "description": "Inspección completada sin incidencias",
+      "event_type": "info",
+      "drone_id": "DRN-015",
+      "created_by": null,
+      "created_at": "2025-10-04T22:10:00Z",
+      "is_active": true
+    }
+ },
+ {
+    "model": "inventory.inventoryitem",
+    "pk": 1,
+    "fields": {
+      "name": "Taladro láser",
+      "category": "Herramienta",
+      "quantity": 2,
+      "description": "Taladro de precisión para reparaciones críticas",
+      "location": "Almacén principal",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 2,
+    "fields": {
+      "name": "Pinzas robóticas",
+      "category": "Herramienta",
+      "quantity": 3,
+      "description": "Pinzas para manipulación de piezas pequeñas",
+      "location": "Almacén secundario",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 3,
+    "fields": {
+      "name": "Tornillos básicos",
+      "category": "Pieza Básica",
+      "quantity": 50,
+      "description": "Tornillos estándar M5",
+      "location": "Estantería 1",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 4,
+    "fields": {
+      "name": "Parche de fibra",
+      "category": "Pieza Avanzada",
+      "quantity": 10,
+      "description": "Para reparar daños en paneles solares",
+      "location": "Estantería 2",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 5,
+    "fields": {
+      "name": "Soldador portátil",
+      "category": "Herramienta",
+      "quantity": 1,
+      "description": "Soldador para reparaciones eléctricas",
+      "location": "Almacén principal",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 6,
+    "fields": {
+      "name": "Pegamento industrial",
+      "category": "Pieza Básica",
+      "quantity": 20,
+      "description": "Para fijar componentes sueltos",
+      "location": "Estantería 3",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 7,
+    "fields": {
+      "name": "Batería de repuesto",
+      "category": "Pieza Avanzada",
+      "quantity": 5,
+      "description": "Batería para drones modelo Explorer-5",
+      "location": "Almacén secundario",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 8,
+    "fields": {
+      "name": "Tornillos M3",
+      "category": "Pieza Básica",
+      "quantity": 100,
+      "description": "Tornillos pequeños para circuitos",
+      "location": "Estantería 1",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 9,
+    "fields": {
+      "name": "Cinta aislante",
+      "category": "Pieza Básica",
+      "quantity": 15,
+      "description": "Para aislar conexiones eléctricas",
+      "location": "Estantería 3",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 10,
+    "fields": {
+      "name": "Microsoldador",
+      "category": "Herramienta",
+      "quantity": 2,
+      "description": "Soldador de precisión para electrónica",
+      "location": "Almacén principal",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 11,
+    "fields": {
+      "name": "Parche avanzado",
+      "category": "Pieza Avanzada",
+      "quantity": 5,
+      "description": "Para reparaciones críticas en drones",
+      "location": "Estantería 2",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 12,
+    "fields": {
+      "name": "Sensor de temperatura",
+      "category": "Herramienta",
+      "quantity": 4,
+      "description": "Para monitoreo de sistemas térmicos",
+      "location": "Almacén principal",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 13,
+    "fields": {
+      "name": "Guantes de seguridad",
+      "category": "Herramienta",
+      "quantity": 10,
+      "description": "Para manipulación segura de piezas",
+      "location": "Almacén secundario",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 14,
+    "fields": {
+      "name": "Panel solar de prueba",
+      "category": "Pieza Avanzada",
+      "quantity": 3,
+      "description": "Panel de repuesto para pruebas",
+      "location": "Estantería 4",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "inventory.inventoryitem",
+    "pk": 15,
+    "fields": {
+      "name": "Manual de operación",
+      "category": "Herramienta",
+      "quantity": 5,
+      "description": "Manual para procedimientos de reparación",
+      "location": "Estantería 5",
+      "is_active": true,
+      "hash_value": ""
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 1,
+    "fields": {
+      "telemetria": 1,
+      "material_usado": [{"nombre": "Parche de fibra", "cantidad": 1}],
+      "estado": "Completado",
+      "foto_url": "http://example.com/photos/repair1.jpg",
+      "video_url": "http://example.com/videos/repair1.mp4",
+      "ubicacion": "Panel solar #3, X:10 Y:5 Z:2",
+      "metricas_exito": {"eficiencia": "50%->90%"},
+      "hash_seguridad": "a1b2c3d4e5f6g7h8i9j0",
+      "timestamp": "2025-10-04T11:00:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 2,
+    "fields": {
+      "telemetria": 2,
+      "material_usado": [{"nombre": "Tornillo M5", "cantidad": 2}, {"nombre": "Cinta aislante", "cantidad": 1}],
+      "estado": "Completado",
+      "foto_url": "http://example.com/photos/repair2.jpg",
+      "video_url": "http://example.com/videos/repair2.mp4",
+      "ubicacion": "Tanque de combustible #2",
+      "metricas_exito": {"presion": "0.8->1.0 bar"},
+      "hash_seguridad": "b2c3d4e5f6g7h8i9j0a1",
+      "timestamp": "2025-10-04T11:30:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 3,
+    "fields": {
+      "telemetria": 3,
+      "material_usado": [{"nombre": "Parche avanzado", "cantidad": 1}],
+      "estado": "En proceso",
+      "foto_url": "",
+      "video_url": "",
+      "ubicacion": "Brazo robótico #1",
+      "metricas_exito": {},
+      "hash_seguridad": "c3d4e5f6g7h8i9j0a1b2",
+      "timestamp": "2025-10-04T12:00:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 4,
+    "fields": {
+      "telemetria": 4,
+      "material_usado": [{"nombre": "Sensor de temperatura", "cantidad": 1}],
+      "estado": "En revisión",
+      "foto_url": "",
+      "video_url": "",
+      "ubicacion": "Módulo térmico #2",
+      "metricas_exito": {},
+      "hash_seguridad": "d4e5f6g7h8i9j0a1b2c3",
+      "timestamp": "2025-10-04T12:30:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 5,
+    "fields": {
+      "telemetria": 5,
+      "material_usado": [{"nombre": "Parche de fibra", "cantidad": 2}],
+      "estado": "Completado",
+      "foto_url": "http://example.com/photos/repair5.jpg",
+      "video_url": "http://example.com/videos/repair5.mp4",
+      "ubicacion": "Fuselaje sección B",
+      "metricas_exito": {"integridad": "70%->100%"},
+      "hash_seguridad": "e5f6g7h8i9j0a1b2c3d4",
+      "timestamp": "2025-10-04T13:00:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 6,
+    "fields": {
+      "telemetria": 6,
+      "material_usado": [{"nombre": "Soldador portátil", "cantidad": 1}],
+      "estado": "Completado",
+      "foto_url": "http://example.com/photos/repair6.jpg",
+      "video_url": "http://example.com/videos/repair6.mp4",
+      "ubicacion": "Módulo eléctrico #4",
+      "metricas_exito": {"voltaje": "12->12.5V"},
+      "hash_seguridad": "f6g7h8i9j0a1b2c3d4e5",
+      "timestamp": "2025-10-04T13:30:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 7,
+    "fields": {
+      "telemetria": 7,
+      "material_usado": [],
+      "estado": "En revisión",
+      "foto_url": "",
+      "video_url": "",
+      "ubicacion": "Panel solar #5",
+      "metricas_exito": {},
+      "hash_seguridad": "g7h8i9j0a1b2c3d4e5f6",
+      "timestamp": "2025-10-04T14:00:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 8,
+    "fields": {
+      "telemetria": 8,
+      "material_usado": [{"nombre": "Tornillos básicos", "cantidad": 5}],
+      "estado": "Completado",
+      "foto_url": "http://example.com/photos/repair8.jpg",
+      "video_url": "http://example.com/videos/repair8.mp4",
+      "ubicacion": "Sección C del fuselaje",
+      "metricas_exito": {"fijacion": "50%->100%"},
+      "hash_seguridad": "h8i9j0a1b2c3d4e5f6g7",
+      "timestamp": "2025-10-04T14:30:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 9,
+    "fields": {
+      "telemetria": 9,
+      "material_usado": [{"nombre": "Batería de repuesto", "cantidad": 1}],
+      "estado": "Completado",
+      "foto_url": "http://example.com/photos/repair9.jpg",
+      "video_url": "http://example.com/videos/repair9.mp4",
+      "ubicacion": "Compartimento batería #1",
+      "metricas_exito": {"carga": "50%->100%"},
+      "hash_seguridad": "i9j0a1b2c3d4e5f6g7h8",
+      "timestamp": "2025-10-04T15:00:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 10,
+    "fields": {
+      "telemetria": 10,
+      "material_usado": [],
+      "estado": "En revisión",
+      "foto_url": "",
+      "video_url": "",
+      "ubicacion": "Fuselaje principal",
+      "metricas_exito": {},
+      "hash_seguridad": "j0a1b2c3d4e5f6g7h8i9",
+      "timestamp": "2025-10-04T15:30:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 11,
+    "fields": {
+      "telemetria": 11,
+      "material_usado": [{"nombre": "Parche de fibra", "cantidad": 1}],
+      "estado": "Completado",
+      "foto_url": "http://example.com/photos/repair11.jpg",
+      "video_url": "http://example.com/videos/repair11.mp4",
+      "ubicacion": "Sección lateral fuselaje",
+      "metricas_exito": {"estetica": "70%->100%"},
+      "hash_seguridad": "k1a2b3c4d5e6f7g8h9i0",
+      "timestamp": "2025-10-04T16:00:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 12,
+    "fields": {
+      "telemetria": 12,
+      "material_usado": [{"nombre": "Parche avanzado", "cantidad": 1}],
+      "estado": "En proceso",
+      "foto_url": "",
+      "video_url": "",
+      "ubicacion": "Panel solar #2",
+      "metricas_exito": {},
+      "hash_seguridad": "l2b3c4d5e6f7g8h9i0j1",
+      "timestamp": "2025-10-04T16:30:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 13,
+    "fields": {
+      "telemetria": 13,
+      "material_usado": [{"nombre": "Microsoldador", "cantidad": 1}],
+      "estado": "Completado",
+      "foto_url": "http://example.com/photos/repair13.jpg",
+      "video_url": "http://example.com/videos/repair13.mp4",
+      "ubicacion": "Módulo eléctrico #1",
+      "metricas_exito": {"voltaje": "5->5.5V"},
+      "hash_seguridad": "m3c4d5e6f7g8h9i0j1k2",
+      "timestamp": "2025-10-04T17:00:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 14,
+    "fields": {
+      "telemetria": 14,
+      "material_usado": [],
+      "estado": "En revisión",
+      "foto_url": "",
+      "video_url": "",
+      "ubicacion": "Módulo hidráulico",
+      "metricas_exito": {},
+      "hash_seguridad": "n4d5e6f7g8h9i0j1k2l3",
+      "timestamp": "2025-10-04T17:30:00Z"
+    }
+  },
+  {
+    "model": "repairs.reportearreglo",
+    "pk": 15,
+    "fields": {
+      "telemetria": 15,
+      "material_usado": [],
+      "estado": "En revisión",
+      "foto_url": "",
+      "video_url": "",
+      "ubicacion": "Tanque de combustible #3",
+      "metricas_exito": {},
+      "hash_seguridad": "o5e6f7g8h9i0j1k2l3m4",
+      "timestamp": "2025-10-04T18:00:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 1,
+    "fields": {
+      "arreglo": 1,
+      "descripcion": "Fallo en panel solar, riesgo de pérdida de eficiencia.",
+      "nivel": "Alta",
+      "timestamp": "2025-10-04T12:00:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 2,
+    "fields": {
+      "arreglo": 2,
+      "descripcion": "Tornillos mal ajustados en módulo de combustible.",
+      "nivel": "Media",
+      "timestamp": "2025-10-04T12:05:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 3,
+    "fields": {
+      "arreglo": 3,
+      "descripcion": "Parche avanzado colocado parcialmente.",
+      "nivel": "Media",
+      "timestamp": "2025-10-04T12:10:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 4,
+    "fields": {
+      "arreglo": 4,
+      "descripcion": "Sensor de temperatura no responde correctamente.",
+      "nivel": "Alta",
+      "timestamp": "2025-10-04T12:15:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 5,
+    "fields": {
+      "arreglo": 5,
+      "descripcion": "Fuselaje con grieta parcial tras reparación.",
+      "nivel": "Alta",
+      "timestamp": "2025-10-04T12:20:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 6,
+    "fields": {
+      "arreglo": 6,
+      "descripcion": "Voltaje inestable en módulo eléctrico.",
+      "nivel": "Media",
+      "timestamp": "2025-10-04T12:25:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 7,
+    "fields": {
+      "arreglo": 7,
+      "descripcion": "Panel solar #5 sin material registrado.",
+      "nivel": "Baja",
+      "timestamp": "2025-10-04T12:30:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 8,
+    "fields": {
+      "arreglo": 8,
+      "descripcion": "Sección C del fuselaje fijada correctamente, sin incidencias.",
+      "nivel": "Baja",
+      "timestamp": "2025-10-04T12:35:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 9,
+    "fields": {
+      "arreglo": 9,
+      "descripcion": "Carga de batería completada con éxito.",
+      "nivel": "Baja",
+      "timestamp": "2025-10-04T12:40:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 10,
+    "fields": {
+      "arreglo": 10,
+      "descripcion": "Fuselaje principal en revisión, material pendiente.",
+      "nivel": "Media",
+      "timestamp": "2025-10-04T12:45:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 11,
+    "fields": {
+      "arreglo": 11,
+      "descripcion": "Sección lateral con parche de fibra colocado.",
+      "nivel": "Baja",
+      "timestamp": "2025-10-04T12:50:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 12,
+    "fields": {
+      "arreglo": 12,
+      "descripcion": "Panel solar #2 en proceso de reparación, material faltante.",
+      "nivel": "Media",
+      "timestamp": "2025-10-04T12:55:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 13,
+    "fields": {
+      "arreglo": 13,
+      "descripcion": "Voltaje estable en módulo eléctrico #1.",
+      "nivel": "Baja",
+      "timestamp": "2025-10-04T13:00:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 14,
+    "fields": {
+      "arreglo": 14,
+      "descripcion": "Módulo hidráulico en revisión.",
+      "nivel": "Media",
+      "timestamp": "2025-10-04T13:05:00Z"
+    }
+  },
+  {
+    "model": "audit.logcritico",
+    "pk": 15,
+    "fields": {
+      "arreglo": 15,
+      "descripcion": "Tanque de combustible #3 sin incidencias críticas.",
+      "nivel": "Baja",
+      "timestamp": "2025-10-04T13:10:00Z"
+    }
+  }
+]
+
+

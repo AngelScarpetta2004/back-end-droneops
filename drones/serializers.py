@@ -1,17 +1,12 @@
 from rest_framework import serializers
-from .models import Sensor, TelemetryData, DroneEvent
+from .models import Telemetria, ReporteDano
 
-class SensorSerializer(serializers.ModelSerializer):
+class TelemetriaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Sensor
+        model = Telemetria
         fields = '__all__'
 
-class TelemetryDataSerializer(serializers.ModelSerializer):
+class ReporteDanoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TelemetryData
-        fields = '__all__'
-
-class DroneEventSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = DroneEvent
+        model = ReporteDano
         fields = '__all__'

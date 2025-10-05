@@ -1,17 +1,7 @@
 from rest_framework import serializers
-from .models import Part, Inventory, BOM
+from .models import InventoryItem
 
-class PartSerializer(serializers.ModelSerializer):
+class InventoryItemSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Part
-        fields = '__all__'
-
-class InventorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Inventory
-        fields = '__all__'
-
-class BOMSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = BOM
+        model = InventoryItem
         fields = '__all__'

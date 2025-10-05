@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import AuditLog
+from .models import LogCritico
 
-class AuditLogSerializer(serializers.ModelSerializer):
+class LogCriticoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = AuditLog
+        model = LogCritico
         fields = '__all__'

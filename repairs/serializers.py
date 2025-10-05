@@ -1,8 +1,7 @@
 from rest_framework import serializers
-from .models import RepairRecord
+from .models import ReporteArreglo
 
-class RepairRecordSerializer(serializers.ModelSerializer):
+class ReporteArregloSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RepairRecord
+        model = ReporteArreglo
         fields = '__all__'
-

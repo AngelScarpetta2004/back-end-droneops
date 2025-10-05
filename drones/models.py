@@ -1,24 +1,30 @@
 from django.db import models
-from users.models import User
 
-class Sensor(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField(blank=True)
-
-class TelemetryData(models.Model):
-    sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
-    drone_id = models.CharField(max_length=50)
-    value = models.FloatField()
+class Telemetria(models.Model):
+    numero_serie = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=100)
+    dias_espacio = models.IntegerField()
+    carga = models.CharField(max_length=50)
+    estado_comunicacion = models.CharField(max_length=50)
+    version_software = models.CharField(max_length=20)
     timestamp = models.DateTimeField(auto_now_add=True)
 
-class DroneEvent(models.Model):
-    EVENT_LEVELS = (
-        ('info', 'Info'),
-        ('warning', 'Warning'),
-        ('critical', 'Critical'),
+class ReporteDano(models.Model):
+    TIPO_DANO = (
+        ("Letal", "Letal"),
+        ("Grave", "Grave"),
+        ("Moderado", "Moderado"),
+        ("Minimo", "Mínimo"),
     )
-    drone_id = models.CharField(max_length=50)
-    event_type = models.CharField(max_length=50)
-    level = models.CharField(max_length=10, choices=EVENT_LEVELS)
-    message = models.TextField()
+    CONDICION = (
+        ("Dañado", "Dañado"),
+        ("Reparado", "Reparado"),
+    )
+    telemetria = models.ForeignKey(Telemetria, on_delete=models.CASCADE, related_name='reportes')
+    tipo = models.CharField(max_length=50, choices=TIPO_DANO)
+    gravedad = models.CharField(max_length=10, choices=TIPO_DANO)
+    condicion = models.CharField(max_length=10, choices=CONDICION)
+    foto_url = models.URLField(blank=True, null=True)
+    ubicacion = models.CharField(max_length=100)
+    id_unico = models.CharField(max_length=50, unique=True)
     timestamp = models.DateTimeField(auto_now_add=True)
