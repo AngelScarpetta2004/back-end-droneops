@@ -1,0 +1,42 @@
+{% extends 'dashboard/base.html' %}
+{% block title %}Usuarios{% endblock %}
+{% block content %}
+<h2>Usuarios existentes</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for u in users %}
+        <tr>
+            <td>{{ u.username }}</td>
+            <td>{{ u.email }}</td>
+            <td>{{ u.role }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- <h2>Crear nuevo usuario</h2>
+<form method="post">
+    {% csrf_token %}
+    <label>Username:</label><input type="text" name="username" required><br>
+    <label>Email:</label><input type="email" name="email" required><br>
+    <label>Password:</label><input type="password" name="password" required><br>
+    <label>Role:</label>
+    <select name="role" required>
+        <option value="admin">Admin</option>
+        <option value="engineer">Engineer</option>
+        <option value="operator">Operator</option>
+    </select><br>
+    <button type="submit">Crear Usuario</button>
+</form> -->
+
+{% if message %}
+<p style="color:green">{{ message }}</p>
+{% endif %}
+{% endblock %}

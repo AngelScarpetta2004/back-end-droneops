@@ -1,0 +1,52 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+<div class="container" style="max-width: 800px; margin-top: 40px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2>Bienvenido, {{ user.username }}</h2>
+
+    <!-- 🔹 Botón de Logout -->
+    <form action="{% url 'logout' %}" method="post" style="margin: 0;">
+      {% csrf_token %}
+      <button type="submit" style="
+          background-color: #dc3545;
+          color: white;
+          border: none;
+          padding: 8px 14px;
+          border-radius: 8px;
+          cursor: pointer;
+      ">
+        Cerrar sesión
+      </button>
+    </form>
+  </div>
+
+  <hr style="margin: 20px 0;">
+
+  <!-- 🔹 Solo visible si el usuario es administrador -->
+  {% if user.is_superuser or user.role == 'admin' %}
+  <div style="display: flex; gap: 12px;">
+    <a href="{% url 'dashboard-user-list' %}" style="
+        background-color: #0d6efd;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+    ">
+      👥 Ver Usuarios
+    </a>
+
+    <a href="{% url 'dashboard-user-create' %}" style="
+        background-color: #198754;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+    ">
+      ➕ Crear Usuario
+    </a>
+  </div>
+  {% endif %}
+
+</div>
+{% endblock %}
