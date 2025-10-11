@@ -1,267 +1,273 @@
-# 🚀 DroneOps Back-End
+#  DroneOps Back-End (Python/Django)
 
-**DroneOps** is a backend API designed to manage drone operations, telemetry data, repairs, events, and inventory.  
-This project provides a scalable and modular foundation for drone management systems using modern backend technologies.
+**DroneOps** is a backend API designed to manage drone operations, including **telemetry data** logging, repairs, events, and inventory.
+This project provides a scalable and modular foundation for drone management systems using the **Django framework** and **Django REST Framework** for API construction.
 
 ---
 
-## 🧩 Table of Contents
+##  Table of Contents
 
-1. [Overview](#overview)  
-2. [Features](#features)  
-3. [Tech Stack](#tech-stack)  
-4. [Project Structure](#project-structure)  
-5. [Getting Started](#getting-started)  
-   - [Prerequisites](#prerequisites)  
-   - [Installation](#installation)  
-   - [Running the Server](#running-the-server)  
-6. [API Endpoints](#api-endpoints)  
-7. [Data Models](#data-models)  
-8. [Authentication](#authentication)  
-9. [Testing](#testing)  
-10. [Contributing](#contributing)  
-11. [License](#license)  
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Project Structure](#project-structure)
+5. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Database Setup](#database-setup)
+   - [Running the Server](#running-the-server)
+6. [API Endpoints](#api-endpoints)
+7. [Data Models](#data-models)
+8. [Authentication](#authentication)
+9. [Testing](#testing)
+10. [Contributing](#contributing)
+11. [License](#license)
 12. [Contact](#contact)
 
 ---
 
-##  Overview
+## Overview
 
-The **DroneOps Back-End** manages core drone operations such as telemetry data, repairs, inventory, and user authentication.  
-It provides a RESTful API that can be easily connected to a front-end or mobile application for full-stack drone management.
-
----
-
-##  Features
-
--  **User Authentication and Authorization**  
-  Registration, login, and token-based authentication (JWT).
-
--  **Drone Management**  
-  CRUD operations for drones, including model, serial number, and operational status.
-
--  **Telemetry and Events**  
-  Record and monitor drone activity, events, and alerts.
-
--  **Repairs and Maintenance**  
-  Track parts replaced, actions taken, and maintenance history.
-
--  **Inventory Control**  
-  Manage spare parts, replacements, and component stock.
-
--  **Scalable Architecture**  
-  Modular structure with controllers, routes, and middlewares.
-
--  **Validation and Error Handling**  
-  Centralized input validation and standardized error responses.
+The **DroneOps Back-End** manages core drone operations, focusing on the **structuring and validation of critical data** such as telemetry records, repair history, inventory control, and user authentication.
+It provides a RESTful API that can be easily connected to any front-end or mobile application for comprehensive management.
 
 ---
 
-##  Tech Stack
+## Features
+
+- **User Authentication and Authorization**
+  Registration, login, and token-based authentication (JWT) implemented using **Django REST Framework SimpleJWT**.
+
+- **Drone Management**
+  CRUD operations for drones, with built-in data validation for model, serial number, and operational status.
+
+- **Telemetry and Events**
+  **Logging, structuring, and monitoring of large volumes of telemetry data** (events and alerts), using Django models to ensure relational integrity.
+
+- **Repairs and Maintenance**
+  **Tracking of maintenance data**, parts replaced, actions taken, and history within a relational schema.
+
+- **Inventory Control**
+  Management of spare parts and components inventory, leveraging the Django ORM for secure stock transactions.
+
+- **Scalable Architecture**
+  Modular structure based on Django's MVT (Model-View-Template) pattern.
+
+- **Validation and Error Handling**
+  **Centralized input data validation** via Django Serializers to ensure data quality and consistency.
+
+---
+
+## Tech Stack
 
 | Category | Technology |
-|-----------|-------------|
-| Runtime Environment | **Node.js** |
-| Framework | **Express.js** |
-| Database | **MongoDB (Mongoose ODM)** |
-| Authentication | **JWT (JSON Web Token)** |
-| Validation | **Express Validator / Custom Middlewares** |
+| :--- | :--- |
+| Runtime Environment | **Python** |
+| Framework | **Django** (with Django REST Framework) |
+| Database | **MySQL/PostgreSQL** (Using Django ORM) |
+| Authentication | **Django REST Framework SimpleJWT** |
+| Validation | **Django Serializers / Argon2** |
 | Version Control | **Git & GitHub** |
-| Testing | **Mocha / Chai / SuperTest (if implemented)** |
 
 ---
 
-##  Project Structure
+## Project Structure
 
 back-end-droneops/
 │
-├── controllers/ # Business logic for routes
-├── middlewares/ # Auth & validation middlewares
-├── models/ # Mongoose schemas for MongoDB
-├── routes/ # API route definitions
-├── config/ # DB connection, environment setup
-├── utils/ # Helper functions
-├── app.js # Main Express app
-├── server.js # Entry point of the server
-├── .env # Environment variables
-├── package.json
-└── README.md
+├── droneops_project/ # Main configuration directory
+│   ├── settings.py # Database and app configuration
+│   └── urls.py # Main project routes
+│
+├── **apps/** # Application modules
+│   ├── **drones/** # Models, Views, and Serializers for Drones and Telemetry
+│   ├── **repairs/** # Models, Views, and Serializers for Repair Records
+│   └── **inventory/** # Models, Views, and Serializers for Inventory Control
+│
+├── **manage.py** # Django command-line utility
+└── **requirements.txt** # Python dependencies
 
 ---
 
-##  Getting Started
+## Getting Started
 
 ### Prerequisites
 
 Before running the project, make sure you have the following installed:
 
-- **Node.js** (v20+ recommended)  
-- **npm** or **yarn**  
-- **MongoDB** (local or cloud instance such as MongoDB Atlas)  
+- **Python** (v3.x recommended)
+- **pip**
+- A **PostgreSQL or MySQL** instance (for production)
 - **Git**
-
----
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/AngelScarpetta2004/back-end-droneops.git
+   git clone [https://github.com/AngelScarpetta2004/back-end-droneops.git](https://github.com/AngelScarpetta2004/back-end-droneops.git)
    cd back-end-droneops
-   
+
 2. **Install dependencies**
    ```bash
-    npm install
-   
-3. **Configure environment variables**
-   Create a .env file in the project root and include:
-   PORT=8000
-  MONGODB_URI=mongodb://localhost:27017/droneops
-  JWT_SECRET=your_jwt_secret
+   pip install -r requirements.txt
 
-## Running the Server
+3. **Database Setup**
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
 
-  For development:
-    
-    npm run dev
-    
-  For production:
+### Running the Server
+
+   To start the Django development server:
+    ```bash
       
-    npm start
+      python manage.py runserver
+ 
+ The server will be available at http://127.0.0.1:8000/
 
-##  API Endpoints
+ ## API Endpoints
 
-###  Authentication
+All endpoints are prefixed with `/api/`.
+
+### Authentication
 
 | Method | Endpoint | Description |
-|--------|-----------|-------------|
+| :--- | :--- | :--- |
 | POST | `/api/auth/register` | Register a new user |
 | POST | `/api/auth/login` | Log in and get JWT token |
+| POST | `/api/auth/token/refresh` | Refresh access token |
 
 ---
 
-###  Drones
+### Drones
 
 | Method | Endpoint | Description |
-|--------|-----------|-------------|
+| :--- | :--- | :--- |
 | GET | `/api/drones` | Get all drones |
-| POST | `/api/drones` | Create a new drone |
+| POST | `/api/drones` | Create a new drone record |
 | GET | `/api/drones/:id` | Get drone by ID |
-| PUT | `/api/drones/:id` | Update drone info |
-| DELETE | `/api/drones/:id` | Delete drone |
+| PUT/PATCH | `/api/drones/:id` | Update drone information |
+| DELETE | `/api/drones/:id` | Delete drone record |
 
 ---
 
-###  Repairs
+### Repairs
 
 | Method | Endpoint | Description |
-|--------|-----------|-------------|
-| GET | `/api/repairs` | List all repairs |
+| :--- | :--- | :--- |
+| GET | `/api/repairs` | List all repair records |
 | POST | `/api/repairs` | Add a new repair record |
-| GET | `/api/repairs/:id` | Get details of a repair |
+| GET | `/api/repairs/:id` | Get repair details |
 
 ---
 
-###  Events & Telemetry
+### Events & Telemetry
 
 | Method | Endpoint | Description |
-|--------|-----------|-------------|
-| GET | `/api/events` | Get all events |
-| POST | `/api/events` | Log a new drone event |
+| :--- | :--- | :--- |
+| GET | `/api/events` | Get all events and telemetry data |
+| POST | `/api/events` | Log a new drone event (telemetry data) |
 
 ---
 
-###  Inventory
+### Inventory
 
 | Method | Endpoint | Description |
-|--------|-----------|-------------|
+| :--- | :--- | :--- |
 | GET | `/api/inventory` | View parts and stock |
 | POST | `/api/inventory` | Add new part or stock item |
 
+---
 
-## Data Models (Example)
+## Data Models (Django ORM Structure Example)
+
+Models are defined using the Django ORM.
+
 ### User
-  {
-    username: String,
-    email: String,
-    password: String (hashed),
-    role: String // admin, operator
-  }
+
+      ```json
+
+         {
+            "username": "String",
+            "email": "String",
+            "password": "String (hashed with Argon2)",
+            "role": "String (admin, operator)"
+         }
 
 ### Drone
-  {
-    model: String,
-    serialNumber: String,
-    status: String,
-    purchaseDate: Date
-  }
 
+      ```json
+      {
+        "id": "AutoField (Primary Key)",
+        "model": "String",
+        "serialNumber": "String",
+        "status": "String",
+        "purchaseDate": "DateField"
+      }
 ### Repair
-  {
-    droneId: ObjectId,
-    description: String,
-    dateReported: Date,
-    dateResolved: Date,
-    cost: Number,
-    partsUsed: [String]
-  }
+
+       ```json
+      {
+        "id": "AutoField (Primary Key)",
+        "droneId": "ForeignKey to Drone",
+        "description": "String",
+        "dateReported": "DateTimeField",
+        "dateResolved": "DateTimeField",
+        "cost": "DecimalField",
+        "partsUsed": "TextField or JSONField"
+      }
 
 ### Event
-  {
-    droneId: ObjectId,
-    eventType: String,
-    timestamp: Date,
-    description: String
-  }
 
-## Authentication
+       ```json
+      {
+        "id": "AutoField (Primary Key)",
+        "droneId": "ForeignKey to Drone",
+        "eventType": "String",
+        "timestamp": "DateTimeField",
+        "description": "String"
+      }
+      
+### Authentication
 
-### JWT-based authentication
-
-Tokens are issued upon login and must be included in request headers:
+JWT-based authentication (via DRF SimpleJWT)
+Tokens are issued upon login and must be included in the request headers to access protected routes:
 
 Authorization: Bearer <token>
 
+###Testing
 
-Middleware validates token and grants access to protected routes.
+If you have tests configured, run them with the native Django command:
 
-## Testing
+      ```bash
+         python manage.py test
 
-If you have tests configured, run them with:
-
-    npm test
-
-
-You can use frameworks like Mocha, Chai, or SuperTest to test routes and database interactions.
-
-## Contributing
+### Contributing
 
 Contributions, bug reports, and feature requests are welcome!
 
-Fork the project
+1. Fork the project
 
-Create a new branch: git checkout -b feature/new-feature
+2. Create a new branch: `git checkout -b feature/new-feature`
 
-Commit your changes: git commit -m "Add new feature"
+3. Commit your changes: `git commit -m "Add new feature"`
 
-Push to the branch: git push origin feature/new-feature
+4. Push to the branch: `git push origin feature/new-feature`
 
-Submit a pull request
+5. Submit a pull request
 
-## License
+### License
 
 This project is licensed under the MIT License.
 © 2025 Angel Scarpetta
 
-## Contact
+### Contact
 
 Author: Angel Scarpetta
-
 GitHub: @AngelScarpetta2004
-
 Repository: DroneOps Back-End
 
-## Summary
+### Summary
 
-DroneOps Back-End provides a reliable and scalable foundation for managing drone operations — from telemetry and event reporting to maintenance tracking and inventory control.
-It’s designed for flexibility, performance, and integration with front-end or mobile applications.
+DroneOps Back-End provides a reliable and scalable foundation for managing drone operations, excelling in the structuring and handling of critical data — from telemetry and events to maintenance tracking to inventory control. It is designed for optimal performance and easy integration with any application.
+    
